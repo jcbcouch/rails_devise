@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h1 class="mb-0">Moderator Dashboard</h1>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Welcome, <%= current_user.email %>!</h4>
+            <p>You have moderator privileges. This page is only visible to moderators and admins.</p>
+            <hr>
+            <p class="mb-0">Your role: <span class="badge bg-info"><%= current_user.role.capitalize %></span></p>
+          </div>
+          
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Manage Posts</h5>
+                  <p class="card-text">Review and moderate user posts</p>
+                  <a href="#" class="btn btn-outline-primary">View Posts</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Manage Comments</h5>
+                  <p class="card-text">Review and moderate user comments</p>
+                  <a href="#" class="btn btn-outline-primary">View Comments</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">User Reports</h5>
+                  <p class="card-text">Handle user reports and issues</p>
+                  <a href="#" class="btn btn-outline-primary">View Reports</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <%= link_to "Back to Home", root_path, class: "btn btn-secondary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
